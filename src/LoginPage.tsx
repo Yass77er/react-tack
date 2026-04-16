@@ -21,7 +21,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   
-  // 🌟 التعديل الأول: قراءة الذاكرة عند فتح الصفحة
+  
   const [user, setUser] = useState<LoginResponse | null>(() => {
     const savedUser = localStorage.getItem('user')
     if (savedUser) {
@@ -56,7 +56,7 @@ export default function LoginPage() {
         setError(data.message || 'Invalid username or password.')
       } else {
         setUser(data)
-        // 🌟 التعديل الثاني: حفظ البيانات في الخزنة عند نجاح الدخول
+        
         localStorage.setItem('user', JSON.stringify(data))
       }
     } catch {
@@ -70,7 +70,7 @@ export default function LoginPage() {
     setUser(null)
     setUsername('')
     setPassword('')
-    // 🌟 التعديل الثالث: مسح البيانات من الخزنة عند تسجيل الخروج
+    
     localStorage.removeItem('user')
   }
 
