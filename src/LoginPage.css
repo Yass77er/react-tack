@@ -1,0 +1,147 @@
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.login-card h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.login-subtitle {
+  color: var(--text);
+  font-size: 15px;
+  margin: 0 0 28px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.field input {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.field input::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.error-msg {
+  color: #e53e3e;
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 12px;
+  background: rgba(229, 62, 62, 0.08);
+  border: 1px solid rgba(229, 62, 62, 0.3);
+  border-radius: 8px;
+}
+
+.login-btn {
+  margin-top: 6px;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.login-btn:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.login-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.login-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin: 22px 0 0;
+  font-size: 13px;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Welcome card */
+.welcome-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-border);
+  margin-bottom: 16px;
+}
+
+.welcome-detail {
+  color: var(--text);
+  font-size: 15px;
+  margin: 4px 0 0;
+}
+
+.logout-btn {
+  margin-top: 24px;
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent-border);
+}
+
+.logout-btn:hover:not(:disabled) {
+  background: var(--accent-bg);
+  opacity: 1;
+}
